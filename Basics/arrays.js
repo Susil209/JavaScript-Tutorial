@@ -161,3 +161,10 @@ const n2 = Array.from([1,2,3], x => x*2)
 console.log(n2);// [ 2, 4, 6 ]
 
 console.log(Array.of(1, 2, 3)); // [1, 2, 3]
+
+const basket = []
+fruits.forEach(fruit => {
+  basket.push(fruit)
+})
+
+console.log(basket); // [ 'mango', 'apple', 'pineapple', 'cacktus' ]
