@@ -53,6 +53,61 @@ const {empName: eName, batch, workStatus} = employee
 console.log(`Employee name is ${eName} and batch is ${batch}`);
 //Employee name is R.K. Sagar and batch is 2022
 
+
+
+// destructuring using default value
+
+const obj = {
+  a: 10,
+  b: 15
+}
+
+const {a: newa=20, b: newb=25, c=100} = obj
+
+console.log(newa, newb, c) // 20 25 100
+
+
+// destructuring in nested objects
+
+const hotel = {
+  hotelName: "Sanferios",
+  location: "Bhubaneswar",
+  categories: ["Chinese","Italian","Maxican","Indian"],
+  mainMenu:["Chicken Tikka","American pie","Swarma"],
+  starterMenu: ["Spegatti","Tandori Naan"],
+  openingHours: {
+      sunday: {open: "09:00AM",close: "11:00PM"},
+      wednesday: {open: "09:00AM",close: "11:00PM"},
+      saturday: {open: "09:00AM",close: "11:00PM"}
+  }
+}
+
+let {openingHours} = hotel
+
+console.log(openingHours);
+
+/*
+{
+  sunday: { open: '09:00AM', close: '11:00PM' },
+  wednesday: { open: '09:00AM', close: '11:00PM' },
+  saturday: { open: '09:00AM', close: '11:00PM' }
+}
+*/
+
+let {sunday: s,wednesday: w} = openingHours
+console.log(s,w); // { open: '09:00AM', close: '11:00PM' } { open: '09:00AM', close: '11:00PM' }
+
+let {sunday: {open, close}} = openingHours
+console.log(open,close); // 09:00AM 11:00PM
+
+
+
+
+
+
+
+
+
 // JSON
 
 // parse()
